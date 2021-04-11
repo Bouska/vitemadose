@@ -68,7 +68,7 @@ def get_city(address: str) -> str:
     >>> get_city("2 avenue de la République, 75005 PARIS")
     'PARIS'
     """
-    return re.search(r'(?<=\s\d{5}\s)(?P<com_nom>.*)\s*$', address).groupdict()['com_nom']
+    return re.search(r'(?<=\s\d{5}\s)(?P<com_nom>.*?)\s*$', address).groupdict()['com_nom']
 
 
 def cp_to_insee(cp):
